@@ -1,0 +1,799 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.sandeepkandula.com/BallpointPenOntology.owl#"
+     xml:base="http://www.sandeepkandula.com/BallpointPenOntology.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl">
+        <owl:versionIRI rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl/1.0.0"/>
+        <rdfs:comment>A knowledge model for describing several types of ballpoint pens based on their components, characterstics and make.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#hasCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasCharacteristic">
+        <rdfs:subPropertyOf rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasFeature"/>
+        <owl:inverseOf rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#isCharacteristicOf"/>
+        <rdfs:domain rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#Pen"/>
+        <rdfs:range rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenCharacteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasFeature"/>
+        <owl:inverseOf rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#isComponentOf"/>
+        <rdfs:domain rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#Pen"/>
+        <rdfs:range rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#hasFeature -->
+
+    <owl:ObjectProperty rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasFeature">
+        <owl:inverseOf rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasFeature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#hasMake -->
+
+    <owl:ObjectProperty rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasMake">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#isCharacteristicOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#isCharacteristicOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#isFeatureOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#isComponentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#isComponentOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#isFeatureOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#isFeatureOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#isFeatureOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#hasWidestDiameterInMillimeters -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasWidestDiameterInMillimeters">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#BallPoint -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#BallPoint">
+        <rdfs:subClassOf rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#BallpointPen -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#BallpointPen">
+        <rdfs:subClassOf rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#Pen"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#BallPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#InkReservoir"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#RetractableMechansim"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#Socket"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A ballpoint pen, also known as a biro or ball pen, is a pen that dispenses ink (usually in paste form) over a metal ball at its point, i.e. over a &quot;ball point&quot;.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#BicCristal -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#BicCristal">
+        <rdfs:subClassOf rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#BallpointPen"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasComponent"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#BallPoint"/>
+                            <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#BlindCap"/>
+                            <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#Cap"/>
+                            <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#InkReservoir"/>
+                            <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#SinglePenBody"/>
+                            <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#Socket"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasCharacteristic"/>
+                <owl:hasValue rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#Disposable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasMake"/>
+                <owl:hasValue rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#Bic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#BlindCap -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#BlindCap">
+        <rdfs:subClassOf rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#Cap -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#Cap">
+        <rdfs:subClassOf rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#ChunkyBallpointpen -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#ChunkyBallpointpen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#BallpointPen"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasWidestDiameterInMillimeters"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.5</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#CustomBallpointPen -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#CustomBallpointPen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#BallpointPen"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#Customized"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A ballpoint pen, also known as a biro or ball pen, is a pen that dispenses ink (usually in paste form) over a metal ball at its point, i.e. over a &quot;ball point&quot;. (Wikipedia 2021)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#DesignerBallpointPen -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#DesignerBallpointPen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#BallpointPen"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#Expensive"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#Refillable"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#DisposableBallpointPen -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#DisposableBallpointPen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#BallpointPen"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#Disposable"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#ErasableInkBallpointPen -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#ErasableInkBallpointPen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#BallpointPen"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#ErasableInk"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#UpsideDownUsage"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#FountainPen -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#FountainPen">
+        <rdfs:subClassOf rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#Pen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#InkReservoir -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#InkReservoir">
+        <rdfs:subClassOf rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#LowerPenBody -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#LowerPenBody">
+        <rdfs:subClassOf rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#MultiColourBallpointpen -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#MultiColourBallpointpen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#BallpointPen"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#Multicolour"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasComponent"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#BallPoint"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasComponent"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#InkReservoir"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasComponent"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#Socket"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#MyInnovativeBallPointPen -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#MyInnovativeBallPointPen">
+        <rdfs:subClassOf rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#BallpointPen"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#RetractableMechansim"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasCharacteristic"/>
+                <owl:hasValue rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#Refillable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasWidestDiameterInMillimeters"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#Pen -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#Pen">
+        <rdfs:subClassOf rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#WritingImplement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#PenCharacteristic -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenCharacteristic"/>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#PenComponent -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenComponent"/>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#PenMake -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenMake"/>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#QuillPen -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#QuillPen">
+        <rdfs:subClassOf rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#Pen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#RefillableBallpointPen -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#RefillableBallpointPen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#BallpointPen"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#Refillable"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#RetractableBallpointPen -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#RetractableBallpointPen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#BallpointPen"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#RetractableMechansim"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#RetractableMechansim -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#RetractableMechansim">
+        <rdfs:subClassOf rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#RollerballPen -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#RollerballPen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#BallpointPen"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#WaterBasedInk"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#SinglePenBody -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#SinglePenBody">
+        <rdfs:subClassOf rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#SlimBallPointPen -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#SlimBallPointPen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#BallpointPen"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#ChunkyBallpointpen"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#Socket -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#Socket">
+        <rdfs:subClassOf rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#SpacePen -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#SpacePen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#BallpointPen"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#UnderWaterUsage"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#UpsideDownUsage"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#ZeroGravityUsage"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#UpperPenBody -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#UpperPenBody">
+        <rdfs:subClassOf rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#WritingImplement -->
+
+    <owl:Class rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#WritingImplement"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#Bic -->
+
+    <owl:NamedIndividual rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#Bic">
+        <rdf:type rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#Cheap -->
+
+    <owl:NamedIndividual rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#Cheap">
+        <rdf:type rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#Customized -->
+
+    <owl:NamedIndividual rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#Customized">
+        <rdf:type rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#Disposable -->
+
+    <owl:NamedIndividual rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#Disposable">
+        <rdf:type rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#ErasableInk -->
+
+    <owl:NamedIndividual rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#ErasableInk">
+        <rdf:type rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#ExampleBallPointPen1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#ExampleBallPointPen1">
+        <rdf:type rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#BallpointPen"/>
+        <hasWidestDiameterInMillimeters rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.8</hasWidestDiameterInMillimeters>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#ExampleBallPointPen2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#ExampleBallPointPen2">
+        <rdf:type rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#BallpointPen"/>
+        <hasWidestDiameterInMillimeters rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</hasWidestDiameterInMillimeters>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#Expensive -->
+
+    <owl:NamedIndividual rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#Expensive">
+        <rdf:type rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#Fisher -->
+
+    <owl:NamedIndividual rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#Fisher">
+        <rdf:type rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#Multicolour -->
+
+    <owl:NamedIndividual rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#Multicolour">
+        <rdf:type rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#PaperMate -->
+
+    <owl:NamedIndividual rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#PaperMate">
+        <rdf:type rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#Parker -->
+
+    <owl:NamedIndividual rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#Parker">
+        <rdf:type rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#Pentel -->
+
+    <owl:NamedIndividual rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#Pentel">
+        <rdf:type rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#Pilot -->
+
+    <owl:NamedIndividual rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#Pilot">
+        <rdf:type rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#Refillable -->
+
+    <owl:NamedIndividual rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#Refillable">
+        <rdf:type rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#UnderWaterUsage -->
+
+    <owl:NamedIndividual rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#UnderWaterUsage">
+        <rdf:type rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#Uniball -->
+
+    <owl:NamedIndividual rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#Uniball">
+        <rdf:type rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#UpsideDownUsage -->
+
+    <owl:NamedIndividual rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#UpsideDownUsage">
+        <rdf:type rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#WaterBasedInk -->
+
+    <owl:NamedIndividual rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#WaterBasedInk">
+        <rdf:type rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#Zebra -->
+
+    <owl:NamedIndividual rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#Zebra">
+        <rdf:type rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sandeepkandula.com/BallpointPenOntology.owl#ZeroGravityUsage -->
+
+    <owl:NamedIndividual rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#ZeroGravityUsage">
+        <rdf:type rdf:resource="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#BallPoint"/>
+            <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#BlindCap"/>
+            <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#Cap"/>
+            <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#InkReservoir"/>
+            <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#LowerPenBody"/>
+            <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenComponent"/>
+            <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#RetractableMechansim"/>
+            <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#SinglePenBody"/>
+            <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#Socket"/>
+            <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#UpperPenBody"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#BallpointPen"/>
+            <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#FountainPen"/>
+            <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#QuillPen"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenCharacteristic"/>
+            <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenComponent"/>
+            <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#PenMake"/>
+            <rdf:Description rdf:about="http://www.sandeepkandula.com/BallpointPenOntology.owl#WritingImplement"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
